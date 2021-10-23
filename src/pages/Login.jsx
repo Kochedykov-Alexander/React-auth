@@ -30,7 +30,8 @@ export default function Login() {
 
 	return (
 		
-			<div className="container">
+			<div className="container-xxl">
+			
 
 			<form className={"col-xs-12 col-sm-9 col-md-6 col-lg-6 " + styles.login}>
 			<h1 style={{textAlign: 'center'}}>Вход</h1>
