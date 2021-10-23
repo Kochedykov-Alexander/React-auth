@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from "react-redux";
 import { Link } from 'react-router-dom';
 import { getLogout } from '../../actions/user';
 import styles from '../../scss/navbar.module.scss'
+import logo from '../../resources/img/react.png'
 
 export default function Navbar() {
 
@@ -15,7 +16,9 @@ export default function Navbar() {
 		
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 		<div className="container-xxl">
-			<a class="navbar-brand" href="#">Test task</a>
+			<a class="navbar-brand" href="#">
+				<img src={logo}  width="30" height="30" alt="" />
+			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>

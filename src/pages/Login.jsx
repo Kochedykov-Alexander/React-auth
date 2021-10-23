@@ -35,6 +35,7 @@ export default function Login() {
 
 			<form className={"col-xs-12 col-sm-9 col-md-6 col-lg-6 " + styles.login}>
 			<h1 style={{textAlign: 'center'}}>Вход</h1>
+			<div>
 			<div class="mb-3">
 				<label for="exampleInputEmail1" class="form-label">Login</label>
 				{((login.isMinLengthError || login.isEmpty)) && (<div className={styles.login__warning}>Min length 6 symbols</div>)}
@@ -44,6 +45,7 @@ export default function Login() {
 				<label for="exampleInputPassword1" class="form-label">Password</label>
 				{((password.isMinLengthError || password.isEmpty)) && (<div className={styles.login__warning}>Min length 6 symbols</div>)}
 				<input type="password" className={((password.isMinLengthError || password.isEmpty)) ? "form-control" : "form-control"} placeholder="password" value={password.value} onChange={(e) => password.onChange(e)} onBlur={(e) => password.onBlur(e)}/>
+			</div>
 			</div>
 			<button type="submit" class="btn btn-success" disabled={isDisable} onClick={() => dispatch(getAuth(login.value, password.value))}>Войти</button>
 			</form>
